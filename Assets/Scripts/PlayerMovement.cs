@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 		var input = new Vector3(
 			Input.GetAxisRaw("Horizontal"),
 			0,
-			Input.GetAxis("Vertical")
+			Input.GetAxisRaw("Vertical")
 		);
 
 		if (input.magnitude > 1)

@@ -5,17 +5,27 @@ public class ButtonControl : MonoBehaviour
 {
 	[Header("References")]
 	public Transform PlayerHeadTransform;
+
 	public Animator Animator;
 
 	private static readonly int Focused = Animator.StringToHash("Focused");
 
 	public UnityEvent OnClick;
+	private bool _hasAnimator;
 
+	private void Start()
+	{
+		_hasAnimator = Animator != null;
+	}
+	
 	private void Update()
 	{
 		if (Physics.Raycast(PlayerHeadTransform.position, PlayerHeadTransform.forward, out RaycastHit hit))
 		{
-			Animator.SetBool(Focused, hit.collider.gameObject == gameObject);
+			if (_hasAnimator)
+			{
+				Animator.SetBool(Focused, hit.collider.gameObject == gameObject);
+			}
 			if (Input.GetKeyDown(KeyCode.Mouse0))
 			{
 				OnClick.Invoke();
@@ -23,7 +33,10 @@ public class ButtonControl : MonoBehaviour
 		}
 		else
 		{
-			Animator.SetBool(Focused, false);
+			if (_hasAnimator)
+			{
+				Animator.SetBool(Focused, false);
+			}
 		}
 	}
 }
