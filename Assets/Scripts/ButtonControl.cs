@@ -24,7 +24,7 @@ public class ButtonControl : MonoBehaviour
 		_hasAnimator = Animator != null;
 		_played = false;
 	}
-	
+
 	private void Update()
 	{
 		if (Physics.Raycast(PlayerHeadTransform.position, PlayerHeadTransform.forward, out RaycastHit hit))
@@ -33,7 +33,8 @@ public class ButtonControl : MonoBehaviour
 			{
 				Animator.SetBool(Focused, hit.collider.gameObject == gameObject);
 			}
-			if (hit.collider.gameObject == gameObject && Input.GetKeyDown(KeyCode.Mouse0))
+
+			if (Input.GetKeyDown(KeyCode.Mouse0) && hit.collider.gameObject == gameObject)
 			{
 				OnClick.Invoke();
 			}
@@ -56,7 +57,7 @@ public class ButtonControl : MonoBehaviour
 	private IEnumerator DoPlaySound()
 	{
 		_played = true;
-		
+
 		float startTime = Time.time;
 		Audio.Play();
 		while ((Time.time - startTime) < SoundDuration)
@@ -64,6 +65,7 @@ public class ButtonControl : MonoBehaviour
 			Audio.volume = VolumeCurve.Evaluate((Time.time - startTime) / SoundDuration);
 			yield return null;
 		}
+
 		Audio.Stop();
 	}
 }

@@ -19,7 +19,7 @@ public class RandomButtonPlacer : MonoBehaviour
 
 		Button.position = hit.point - Vector3.Scale(hit.normal, Button.lossyScale) * 0.45f;
 		hit.normal.Normalize();
-		Button.GetComponent<BoxCollider>().size -= new Vector3(
+		Button.GetComponent<BoxCollider>().size = new Vector3(
 			2 - Mathf.Abs(hit.normal.x),
 			2 - Mathf.Abs(hit.normal.y),
 			2 - Mathf.Abs(hit.normal.z)

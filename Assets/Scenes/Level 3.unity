@@ -663,6 +663,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f96a78e9ea2c7fd4584cd029a28e0df6, type: 2}
+    - target: {fileID: 406761795003803518, guid: 850a9f8563c316a4dab9b39ade62d697,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
         type: 3}
       propertyPath: PlayerHeadTransform
