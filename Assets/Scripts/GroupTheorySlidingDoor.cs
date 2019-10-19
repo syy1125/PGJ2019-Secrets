@@ -5,7 +5,7 @@ public class GroupTheorySlidingDoor : MonoBehaviour
 {
     public GroupElement[] solutionExpression;
     GroupTheorySimplifier solution;
-    GroupTheorySimplifier input = new GroupTheorySimplifier();
+    public GroupTheorySimplifier input = new GroupTheorySimplifier();
 
     SlidingDoor door;
 

@@ -10,7 +10,7 @@ public enum GroupElement
 
 public class GroupTheorySimplifier
 {
-    List<int> expression = new List<int>();
+    public List<int> expression = new List<int>();
     public GroupTheorySimplifier(int[] ints)
     {
         foreach (int i in ints)
