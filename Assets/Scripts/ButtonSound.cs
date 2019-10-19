@@ -6,12 +6,14 @@ public class ButtonSound : MonoBehaviour
 {
     [Header("References")]
     public AudioSource Audio;
-    
+
     [Header("Config")]
+    public bool Single = true;
     public float SoundDuration;
     public AnimationCurve VolumeCurve;
     
     private bool _played;
+    private Coroutine _playCoroutine;
 
     private void Start()
     {
@@ -20,8 +22,13 @@ public class ButtonSound : MonoBehaviour
 
     public void PlaySound()
     {
-        if (_played) return;
-        StartCoroutine(DoPlaySound());
+        if (Single && _played) return;
+
+        if (_playCoroutine != null)
+        {
+            StopCoroutine(_playCoroutine);
+        }
+        _playCoroutine = StartCoroutine(DoPlaySound());
     }
 
     private IEnumerator DoPlaySound()
@@ -37,5 +44,6 @@ public class ButtonSound : MonoBehaviour
         }
 
         Audio.Stop();
+        _playCoroutine = null;
     }
 }
