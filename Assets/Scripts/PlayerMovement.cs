@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 	[Header("Config")]
 	public float Speed;
 
+    private Vector3 vel;
+
 	private void Start()
 	{
 		_body = GetComponent<Rigidbody>();
@@ -30,7 +32,18 @@ public class PlayerMovement : MonoBehaviour
 		{
 			input.Normalize();
 		}
+
+        if (Input.GetButtonDown("Jump") && _body.position.y < -0.4)
+        {
+            _body.velocity += Vector3.up * 4f;
+        }
 		
-		_body.velocity = Speed * transform.TransformVector(input);
+        Vector3 target_vel = Speed * transform.TransformVector(input);
+        vel += (target_vel - vel) * 0.1f;
+        if (vel.sqrMagnitude < Speed * 0.01)
+        {
+            vel = Vector3.zero;
+        }
+        _body.velocity = Vector3.ProjectOnPlane(vel, Vector3.up) + Vector3.Project(_body.velocity, Vector3.up);
 	}
 }
