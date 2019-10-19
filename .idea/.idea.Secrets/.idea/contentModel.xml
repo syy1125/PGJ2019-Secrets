@@ -9,9 +9,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="ButtonControl.cs" t="Include" />
+          <e p="ExitTrigger.cs" t="Include" />
           <e p="PlayerLook.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="RandomButtonPlacer.cs" t="Include" />
+          <e p="SceneTransition.cs" t="Include" />
           <e p="SlidingDoor.cs" t="Include" />
         </e>
       </e>
