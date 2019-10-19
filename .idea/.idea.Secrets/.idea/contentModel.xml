@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\syy11\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\syy11\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Secrets.1760566685.00" t="ExcludeRecursive" />
+    <e p="D:\Development\Secrets" t="IncludeFlat">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="Secrets.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
