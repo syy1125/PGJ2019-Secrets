@@ -552,6 +552,11 @@ PrefabInstance:
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Slide
       objectReference: {fileID: 0}
+    - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
+        type: 3}
+      propertyPath: Animator
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 406761795003803515, guid: 850a9f8563c316a4dab9b39ade62d697, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 850a9f8563c316a4dab9b39ade62d697, type: 3}

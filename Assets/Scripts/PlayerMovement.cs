@@ -14,6 +14,12 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Update()
 	{
+		if (SceneTransition.InTransition)
+		{
+			_body.velocity = Vector3.zero;
+			return;
+		}
+		
 		var input = new Vector3(
 			Input.GetAxisRaw("Horizontal"),
 			0,

@@ -2,6 +2,8 @@
 
 public class PlayerLook : MonoBehaviour
 {
+	private static int _activeCount;
+	
 	public float MinY;
 	public float MaxY;
 
@@ -17,10 +19,13 @@ public class PlayerLook : MonoBehaviour
 	private void OnEnable()
 	{
 		Cursor.lockState = CursorLockMode.Locked;
+		_activeCount++;
 	}
 
 	private void Update()
 	{
+		if (SceneTransition.InTransition) return;
+		
 		AngleY += Input.GetAxisRaw("Mouse Y");
 
 		transform.parent.Rotate(Vector3.up, Input.GetAxisRaw("Mouse X"));
@@ -33,6 +38,9 @@ public class PlayerLook : MonoBehaviour
 
 	private void OnDisable()
 	{
-		Cursor.lockState = CursorLockMode.None;
+		if (--_activeCount == 0)
+		{
+			Cursor.lockState = CursorLockMode.None;
+		}
 	}
 }
