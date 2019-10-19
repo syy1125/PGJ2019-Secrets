@@ -12,10 +12,13 @@ public class SceneTransition : MonoBehaviour
 	public float FadeDuration;
 	public float HoldDuration;
 	public string NextScene;
+	public AnimationCurve VolumeCurve;
+	private AudioSource _audio;
 	private Image _image;
 
 	private void Start()
 	{
+		_audio = GetComponent<AudioSource>();
 		_image = GetComponent<Image>();
 	}
 
@@ -29,19 +32,33 @@ public class SceneTransition : MonoBehaviour
 		InTransition = true;
 
 		DontDestroyOnLoad(transform.parent.gameObject);
-		
+
 		_image.color = Color.white;
 		_image.CrossFadeAlpha(0, 0, true);
-		
+
 		_image.CrossFadeAlpha(1, FadeDuration, false);
-		yield return new WaitForSeconds(FadeDuration);
+		float fadeInStartTime = Time.time;
+		_audio.Play();
+		while ((Time.time - fadeInStartTime) < FadeDuration)
+		{
+			_audio.volume = VolumeCurve.Evaluate((Time.time - fadeInStartTime) / FadeDuration);
+			yield return null;
+		}
+
+		_audio.volume = VolumeCurve.Evaluate(1);
 
 		AsyncOperation loadOp = SceneManager.LoadSceneAsync(NextScene);
 		yield return new WaitForSeconds(HoldDuration);
 		yield return new WaitUntil(() => loadOp.isDone);
 
 		_image.CrossFadeAlpha(0, FadeDuration, false);
-		yield return new WaitForSeconds(FadeDuration);
+		float fadeOutStartTime = Time.time;
+		while ((Time.time - fadeOutStartTime) < FadeDuration)
+		{
+			_audio.volume = VolumeCurve.Evaluate(1 - (Time.time - fadeOutStartTime) / FadeDuration);
+			yield return null;
+		}
+		_audio.Stop();
 
 		Destroy(transform.parent.gameObject);
 
