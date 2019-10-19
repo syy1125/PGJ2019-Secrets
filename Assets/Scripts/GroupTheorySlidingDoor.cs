@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class GroupTheorySlidingDoor : SlidingDoor
+public class GroupTheorySlidingDoor : MonoBehaviour
 {
     public GroupElement[] solutionExpression;
     GroupTheorySimplifier solution;
     GroupTheorySimplifier input = new GroupTheorySimplifier();
 
+    SlidingDoor door;
+
     public void Start()
     {
         solution = new GroupTheorySimplifier(solutionExpression);
+        door = GetComponent<SlidingDoor>();
     }
 
     public void PushA()
@@ -36,7 +39,7 @@ public class GroupTheorySlidingDoor : SlidingDoor
     {
         if (input.Equals(solution))
         {
-            Slide();
+            door.Slide();
         }
         else
         {

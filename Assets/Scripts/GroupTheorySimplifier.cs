@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 public enum GroupElement
 {
@@ -41,6 +42,10 @@ public class GroupTheorySimplifier
         {
             Pop();
         }
+        else
+        {
+            expression.Add(a);
+        }
     }
 
     public void Clear()
@@ -64,19 +69,18 @@ public class GroupTheorySimplifier
         if (this.expression.Count != other.expression.Count) { return false; }
         for (int i = 0; i < this.expression.Count; i++)
         {
+            Debug.Log(this.expression[i]);
+            Debug.Log(other.expression[i]);
             if (this.expression[i] != other.expression[i]) { return false; }
         }
         return true;
     }
+
+    public void Main()
+    {
+        // Testing
+        GroupTheorySimplifier testSolution = new GroupTheorySimplifier(new int[] { 1, 2, -1, -2 });
+        GroupTheorySimplifier testEquivalent = new GroupTheorySimplifier(new int[] { 1, 2, -1 });
+        Debug.Log(testEquivalent.Equals(testSolution));
+    }
 }
-
-//    GroupTheorySimplifier solution = new GroupTheorySimplifier(new GroupElement[] {GroupElement.a, GroupElement.b, GroupElement.ai, GroupElement.bi});
-
-//    public void Start()
-//    {
-//        // Testing
-//        GroupTheorySimplifier testSolution = new GroupTheorySimplifier(new int[] { 1, 2, 3, 4, 5 });
-//        GroupTheorySimplifier testEquivalent = new GroupTheorySimplifier(new int[] { 1, -1, 1, 3, -2, 5, -5, 2, -3, 2, 3, 4, -3, 4, -4, 3, 5 });
-//        print(testEquivalent.Equals(testSolution));
-//    }
-//}
