@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class ButtonControl : MonoBehaviour
@@ -26,7 +26,7 @@ public class ButtonControl : MonoBehaviour
 			{
 				Animator.SetBool(Focused, hit.collider.gameObject == gameObject);
 			}
-			if (Input.GetKeyDown(KeyCode.Mouse0))
+			if (hit.collider.gameObject == gameObject && Input.GetKeyDown(KeyCode.Mouse0))
 			{
 				OnClick.Invoke();
 			}
