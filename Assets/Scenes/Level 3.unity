@@ -812,6 +812,8 @@ MonoBehaviour:
   Button: {fileID: 1988900051}
   Prohibited:
   - {fileID: 1628830375}
+  SinkFactor: 0.85
+  ScaleFactor: 1.5
 --- !u!1001 &1472792027403120494
 PrefabInstance:
   m_ObjectHideFlags: 0

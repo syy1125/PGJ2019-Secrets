@@ -9,6 +9,11 @@ public class RandomButtonPlacer : MonoBehaviour
 	public Transform Button;
 	public GameObject[] Prohibited;
 
+	[Header("Config")]
+	[Range(0,1)]
+	public float SinkFactor;
+	public float ScaleFactor;
+
 	private void Start()
 	{
 		RaycastHit hit;
@@ -17,7 +22,8 @@ public class RandomButtonPlacer : MonoBehaviour
 			|| Array.Exists(Prohibited, obj => obj == hit.collider.gameObject)
 			) ;
 
-		Button.position = hit.point - Vector3.Scale(hit.normal, Button.lossyScale) * 0.45f;
+		Button.localScale *= ScaleFactor;
+		Button.position = hit.point - Vector3.Scale(hit.normal, Button.lossyScale) * 0.5f * SinkFactor;
 		hit.normal.Normalize();
 		Button.GetComponent<BoxCollider>().size = new Vector3(
 			2 - Mathf.Abs(hit.normal.x),

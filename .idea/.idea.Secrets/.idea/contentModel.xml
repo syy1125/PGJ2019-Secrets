@@ -14,6 +14,7 @@
           <e p="GroupTheorySimplifier.cs" t="Include" />
           <e p="GroupTheorySlidingDoor.cs" t="Include" />
           <e p="HoldButtonControl.cs" t="Include" />
+          <e p="InputDisplay.cs" t="Include" />
           <e p="LevelTitle.cs" t="Include" />
           <e p="PlayerLook.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
