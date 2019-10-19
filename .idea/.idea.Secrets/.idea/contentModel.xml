@@ -11,6 +11,7 @@
           <e p="ButtonControl.cs" t="Include" />
           <e p="PlayerLook.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="RandomButtonPlacer.cs" t="Include" />
           <e p="SlidingDoor.cs" t="Include" />
         </e>
       </e>
