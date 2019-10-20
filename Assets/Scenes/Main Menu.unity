@@ -622,7 +622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: -3}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1018012566
@@ -676,6 +676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Credits Transition Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4994643973209266757, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
+        type: 3}
+      propertyPath: NextScene
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 4994643974384334658, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
         type: 3}
@@ -781,11 +786,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994643973209266757, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
-        type: 3}
-      propertyPath: NextScene
-      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 4687473228172350405, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
         type: 3}
@@ -1495,6 +1495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4994643973209266757, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
+        type: 3}
+      propertyPath: NextScene
+      value: Level 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4994643974384334658, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1599,11 +1604,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4994643973209266757, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
-        type: 3}
-      propertyPath: NextScene
-      value: Level 1
       objectReference: {fileID: 0}
     - target: {fileID: 4687473228172350405, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
         type: 3}

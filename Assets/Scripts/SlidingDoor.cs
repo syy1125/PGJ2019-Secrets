@@ -33,4 +33,5 @@ public class SlidingDoor : MonoBehaviour
 		}
 		transform.position = _end;
 	}
+
 }
