@@ -50,12 +50,14 @@ public class PauseMenuControl : MonoBehaviour
 	public void RestartLevel()
 	{
 		Resume();
+		Transition.GetComponent<AudioSource>().enabled = false;
 		Transition.Transition(SceneManager.GetActiveScene().name);
 	}
 
 	public void MainMenu()
 	{
 		Resume();
+		Transition.GetComponent<AudioSource>().enabled = false;
 		Transition.Transition("Main Menu");
 	}
 
