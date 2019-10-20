@@ -15,6 +15,7 @@ public class PauseMenuControl : MonoBehaviour
 
 	private void Update()
 	{
+		if (SceneTransition.InTransition) return;
 		if (!Input.GetKeyDown(KeyCode.Escape)) return;
 		
 		if (Paused)

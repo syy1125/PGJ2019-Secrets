@@ -47,31 +47,31 @@ public class SceneTransition : MonoBehaviour
 		_image.color = Color.white;
 		_image.CrossFadeAlpha(0, 0, true);
 
-		_image.CrossFadeAlpha(1, FadeDuration, false);
-		float fadeInStartTime = Time.time;
+		_image.CrossFadeAlpha(1, FadeDuration, true);
+		float fadeInStartTime = Time.unscaledTime;
 
 		if (_audio.isActiveAndEnabled)
 		{
 			_audio.Play();
 		}
 
-		while ((Time.time - fadeInStartTime) < FadeDuration)
+		while ((Time.unscaledTime - fadeInStartTime) < FadeDuration)
 		{
-			_audio.volume = VolumeCurve.Evaluate((Time.time - fadeInStartTime) / FadeDuration);
+			_audio.volume = VolumeCurve.Evaluate((Time.unscaledTime - fadeInStartTime) / FadeDuration);
 			yield return null;
 		}
 
 		_audio.volume = VolumeCurve.Evaluate(1);
 
 		AsyncOperation loadOp = SceneManager.LoadSceneAsync(NextScene);
-		yield return new WaitForSeconds(HoldDuration);
+		yield return new WaitForSecondsRealtime(HoldDuration);
 		yield return new WaitUntil(() => loadOp.isDone);
 
-		_image.CrossFadeAlpha(0, FadeDuration, false);
-		float fadeOutStartTime = Time.time;
-		while ((Time.time - fadeOutStartTime) < FadeDuration)
+		_image.CrossFadeAlpha(0, FadeDuration, true);
+		float fadeOutStartTime = Time.unscaledTime;
+		while ((Time.unscaledTime - fadeOutStartTime) < FadeDuration)
 		{
-			_audio.volume = VolumeCurve.Evaluate(1 - (Time.time - fadeOutStartTime) / FadeDuration);
+			_audio.volume = VolumeCurve.Evaluate(1 - (Time.unscaledTime - fadeOutStartTime) / FadeDuration);
 			yield return null;
 		}
 
