@@ -20,6 +20,8 @@ public class ButtonControl : MonoBehaviour
 
 	private void Update()
 	{
+		if (PauseMenuControl.Paused) return;
+		
 		if (Physics.Raycast(PlayerHeadTransform.position, PlayerHeadTransform.forward, out RaycastHit hit))
 		{
 			if (_hasAnimator)

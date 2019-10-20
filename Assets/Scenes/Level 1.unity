@@ -530,6 +530,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &481358286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1472792026709410331, guid: 86eee52275b4bf749a95e82e01270873,
+    type: 3}
+  m_PrefabInstance: {fileID: 1254592651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b63a13114f259749aa30c28473edb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &507076891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3196,6 +3208,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 917860212430598333, guid: 120e398e5884ae64f9f375767fe1dfd0,
+        type: 3}
+      propertyPath: Look
+      value: 
+      objectReference: {fileID: 481358286}
+    - target: {fileID: 917860212430598333, guid: 120e398e5884ae64f9f375767fe1dfd0,
+        type: 3}
+      propertyPath: Transition
+      value: 
+      objectReference: {fileID: 2137298376}
     - target: {fileID: 6393300726388324397, guid: 120e398e5884ae64f9f375767fe1dfd0,
         type: 3}
       propertyPath: m_Name
@@ -3310,11 +3332,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: Level 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6393300726388324395, guid: 120e398e5884ae64f9f375767fe1dfd0,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 120e398e5884ae64f9f375767fe1dfd0, type: 3}

@@ -20,6 +20,8 @@ public class HoldButtonControl : MonoBehaviour
 
 	private void Update()
 	{
+		if (PauseMenuControl.Paused) return;
+		
 		bool onTarget = Physics.Raycast(PlayerHead.position, PlayerHead.forward, out RaycastHit hit)
 		                && hit.collider.gameObject == gameObject;
 
