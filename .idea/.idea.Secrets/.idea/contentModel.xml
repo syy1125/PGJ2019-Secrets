@@ -22,7 +22,10 @@
           <e p="PlayerLook.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PuzzleControl.cs" t="Include" />
+          <e p="QuitButton.cs" t="Include" />
           <e p="RandomButtonPlacer.cs" t="Include" />
+          <e p="ResumeGame.cs" t="Include" />
+          <e p="SaveData.cs" t="Include" />
           <e p="SceneTransition.cs" t="Include" />
           <e p="SlidingDoor.cs" t="Include" />
         </e>

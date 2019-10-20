@@ -27,6 +27,12 @@ public class SceneTransition : MonoBehaviour
 		NextScene = sceneName;
 	}
 
+	public void Transition(string sceneName)
+	{
+		NextScene = sceneName;
+		Transition();
+	}
+
 	public void Transition()
 	{
 		StartCoroutine(DoTransition());
@@ -43,7 +49,12 @@ public class SceneTransition : MonoBehaviour
 
 		_image.CrossFadeAlpha(1, FadeDuration, false);
 		float fadeInStartTime = Time.time;
-		_audio.Play();
+
+		if (!_audio.isActiveAndEnabled)
+		{
+			_audio.Play();
+		}
+
 		while ((Time.time - fadeInStartTime) < FadeDuration)
 		{
 			_audio.volume = VolumeCurve.Evaluate((Time.time - fadeInStartTime) / FadeDuration);
@@ -63,7 +74,11 @@ public class SceneTransition : MonoBehaviour
 			_audio.volume = VolumeCurve.Evaluate(1 - (Time.time - fadeOutStartTime) / FadeDuration);
 			yield return null;
 		}
-		_audio.Stop();
+
+		if (_audio.isActiveAndEnabled)
+		{
+			_audio.Stop();
+		}
 
 		Destroy(transform.parent.gameObject);
 
