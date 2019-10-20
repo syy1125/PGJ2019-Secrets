@@ -25,6 +25,7 @@ public class PuzzleControl : MonoBehaviour
 		}
 		else
 		{
+			Input = "";
 			OnFailure.Invoke();
 			Invoke(nameof(ClearInput), 1);
 		}
@@ -32,7 +33,6 @@ public class PuzzleControl : MonoBehaviour
 
 	private void ClearInput()
 	{
-		Input = "";
 		OnInputChange.Invoke();
 	}
 }
