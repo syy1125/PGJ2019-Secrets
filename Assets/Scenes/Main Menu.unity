@@ -1859,7 +1859,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2096594066}
-        m_MethodName: ResetSecret
+        m_MethodName: ResetSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

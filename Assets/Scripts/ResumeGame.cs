@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Runtime.Serialization;
+﻿using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,26 +6,21 @@ using UnityEngine.UI;
 public class ResumeGame : MonoBehaviour
 {
 	public SceneTransition Transition;
-	
+
 	private SaveData _save;
 
 	private void Start()
 	{
-		string savePath = Path.Combine(Application.persistentDataPath, "game.sav");
-		
-		if (File.Exists(savePath))
+		if (File.Exists(Checkpoint.SavePath))
 		{
-			try
+			using (FileStream saveFile = File.OpenRead(Checkpoint.SavePath))
 			{
-				FileStream saveFile = File.OpenRead(savePath);
 				var formatter = new BinaryFormatter();
 				_save = (SaveData) formatter.Deserialize(saveFile);
 				GetComponent<Button>().interactable = true;
 
 				return;
 			}
-			catch
-			{}
 		}
 
 		GetComponent<Button>().interactable = false;
