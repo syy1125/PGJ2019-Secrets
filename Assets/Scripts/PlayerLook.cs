@@ -42,7 +42,7 @@ public class PlayerLook : MonoBehaviour
 		if (--_activeCount == 0)
 		{
 			Cursor.lockState = CursorLockMode.None;
-			Cursor.visible = false;
+			Cursor.visible = true;
 		}
 	}
 }
