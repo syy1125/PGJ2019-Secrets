@@ -31,5 +31,8 @@ EditorBuildSettings:
     guid: a121ab43e919e734b8b3071a2a2dd9d3
   - enabled: 1
     path: Assets/Scenes/Credits.unity
-    guid: f7c5b842ea9886e4dba76666a7985f75
+    guid: c71f0fec107041e4b8960b43f893af6c
+  - enabled: 1
+    path: Assets/Scenes/Secret Credits.unity
+    guid: f9b3a52a578bc294bb99d340e15a6a58
   m_configObjects: {}

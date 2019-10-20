@@ -863,12 +863,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &856229394 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4994643973209266761, guid: 1461ef5d1057dfa4bb69a13ef4d674f1,
-    type: 3}
-  m_PrefabInstance: {fileID: 4994643974469422989}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &857523572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2381,15 +2375,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 856229394}
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2137298376}
+        m_MethodName: SetNextScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Secret Credits
           m_BoolArgument: 0
         m_CallState: 2
   OnFailure:
@@ -2905,7 +2899,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4994643974469422989}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856229394}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d7eca833b518fa4590a11c43a51c5b5, type: 3}

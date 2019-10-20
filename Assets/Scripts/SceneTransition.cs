@@ -50,7 +50,7 @@ public class SceneTransition : MonoBehaviour
 		_image.CrossFadeAlpha(1, FadeDuration, false);
 		float fadeInStartTime = Time.time;
 
-		if (!_audio.isActiveAndEnabled)
+		if (_audio.isActiveAndEnabled)
 		{
 			_audio.Play();
 		}
