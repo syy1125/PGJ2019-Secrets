@@ -692,6 +692,9 @@ MonoBehaviour:
   - {fileID: 1112180499}
   SinkFactor: 0.85
   ScaleFactor: 1.5
+  OnPlacement:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &561343918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1224,9 @@ MonoBehaviour:
   - {fileID: 507076893}
   SinkFactor: 0.85
   ScaleFactor: 1.5
+  OnPlacement:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1115981632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 406761795003803519, guid: 850a9f8563c316a4dab9b39ade62d697,
@@ -2020,6 +2026,9 @@ MonoBehaviour:
   - {fileID: 1112180499}
   SinkFactor: 0.85
   ScaleFactor: 1.5
+  OnPlacement:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1708518258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8237285543098488698, guid: 2164b8b353757a64c970774ddfcf4d34,
@@ -2813,6 +2822,9 @@ MonoBehaviour:
   - {fileID: 1112180499}
   SinkFactor: 0.85
   ScaleFactor: 1.5
+  OnPlacement:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2069179184
 GameObject:
   m_ObjectHideFlags: 0

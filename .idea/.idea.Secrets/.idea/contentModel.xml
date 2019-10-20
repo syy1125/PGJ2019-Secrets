@@ -12,7 +12,8 @@
           <e p="ButtonControl.cs" t="Include" />
           <e p="ButtonSound.cs" t="Include" />
           <e p="Checkpoint.cs" t="Include" />
-          <e p="DontDestroyThis.cs" t="Include" />
+          <e p="ClearSecret.cs" t="Include" />
+          <e p="DynamicSlidingDirection.cs" t="Include" />
           <e p="ExitTrigger.cs" t="Include" />
           <e p="ExpectedPuzzleInput.cs" t="Include" />
           <e p="GroupTheorySimplifier.cs" t="Include" />
@@ -20,6 +21,7 @@
           <e p="HoldButtonControl.cs" t="Include" />
           <e p="InputDisplay.cs" t="Include" />
           <e p="LevelTitle.cs" t="Include" />
+          <e p="MusicPlayer.cs" t="Include" />
           <e p="PauseMenuControl.cs" t="Include" />
           <e p="PlayerLook.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
@@ -29,6 +31,8 @@
           <e p="ResumeGame.cs" t="Include" />
           <e p="SaveData.cs" t="Include" />
           <e p="SceneTransition.cs" t="Include" />
+          <e p="SecretComment.cs" t="Include" />
+          <e p="SecretRoom.cs" t="Include" />
           <e p="SlidingDoor.cs" t="Include" />
         </e>
       </e>
