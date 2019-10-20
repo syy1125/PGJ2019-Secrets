@@ -49,11 +49,13 @@ public class PauseMenuControl : MonoBehaviour
 
 	public void RestartLevel()
 	{
+		Resume();
 		Transition.Transition(SceneManager.GetActiveScene().name);
 	}
 
 	public void MainMenu()
 	{
+		Resume();
 		Transition.Transition("Main Menu");
 	}
 
