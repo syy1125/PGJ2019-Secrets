@@ -12,6 +12,7 @@
           <e p="ButtonControl.cs" t="Include" />
           <e p="ButtonSound.cs" t="Include" />
           <e p="Checkpoint.cs" t="Include" />
+          <e p="DontDestroyThis.cs" t="Include" />
           <e p="ExitTrigger.cs" t="Include" />
           <e p="ExpectedPuzzleInput.cs" t="Include" />
           <e p="GroupTheorySimplifier.cs" t="Include" />
