@@ -11,6 +11,7 @@ public class HoldButtonControl : MonoBehaviour
 
 	[Header("Config")]
 	public float MaxProgress;
+	public bool Single = true;
 
 	public UnityEvent OnMaxProgress;
 
@@ -42,7 +43,11 @@ public class HoldButtonControl : MonoBehaviour
 			{
 				OnMaxProgress.Invoke();
 				ProgressBar.gameObject.SetActive(false);
-				enabled = false;
+				
+				if (Single)
+				{
+					enabled = false;
+				}
 			}
 		}
 	}

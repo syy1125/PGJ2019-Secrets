@@ -8,9 +8,11 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="ActualPuzzleInput.cs" t="Include" />
           <e p="ButtonControl.cs" t="Include" />
           <e p="ButtonSound.cs" t="Include" />
           <e p="ExitTrigger.cs" t="Include" />
+          <e p="ExpectedPuzzleInput.cs" t="Include" />
           <e p="GroupTheorySimplifier.cs" t="Include" />
           <e p="GroupTheorySlidingDoor.cs" t="Include" />
           <e p="HoldButtonControl.cs" t="Include" />
@@ -18,6 +20,7 @@
           <e p="LevelTitle.cs" t="Include" />
           <e p="PlayerLook.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="PuzzleControl.cs" t="Include" />
           <e p="RandomButtonPlacer.cs" t="Include" />
           <e p="SceneTransition.cs" t="Include" />
           <e p="SlidingDoor.cs" t="Include" />
