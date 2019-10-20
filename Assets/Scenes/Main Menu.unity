@@ -656,7 +656,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Hidden Room
+  m_Text: Find The Button
 --- !u!222 &1018012567
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -864,7 +864,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '"This game makes no sense whatsoever"
 
-    - Developers'
+    - Everyone'
 --- !u!222 &1242828547
 CanvasRenderer:
   m_ObjectHideFlags: 0
