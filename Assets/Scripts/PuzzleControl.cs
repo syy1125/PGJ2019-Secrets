@@ -26,7 +26,7 @@ public class PuzzleControl : MonoBehaviour
 		else
 		{
 			OnFailure.Invoke();
-			Invoke("ClearInput", 0.5f);
+			Invoke(nameof(ClearInput), 1);
 		}
 	}
 
