@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 402e7b2cc57ca6848914ede8a035fb3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ReplaceText: Congratulations! You found the secret room!
+  ReplaceText: Congratulations! You have found the secret room!
 --- !u!1 &1235840123
 GameObject:
   m_ObjectHideFlags: 0
