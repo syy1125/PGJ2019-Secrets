@@ -19,6 +19,7 @@
           <e p="HoldButtonControl.cs" t="Include" />
           <e p="InputDisplay.cs" t="Include" />
           <e p="LevelTitle.cs" t="Include" />
+          <e p="PauseMenuControl.cs" t="Include" />
           <e p="PlayerLook.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PuzzleControl.cs" t="Include" />
