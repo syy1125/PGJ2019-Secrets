@@ -5,14 +5,10 @@ public class SlidingDoor : MonoBehaviour
 {
 	public Vector3 Offset;
 	public float Duration;
-	private Vector3 _start;
-	private Vector3 _end;
 	private bool _run;
 
 	private void Start()
 	{
-		_start = transform.position;
-		_end = _start + Offset;
 		_run = false;
 	}
 
@@ -24,14 +20,17 @@ public class SlidingDoor : MonoBehaviour
 
 	private IEnumerator DoSlide()
 	{
+		Vector3 start = transform.position;
+		Vector3 end = start + Offset;
 		_run = true;
+		
 		float startTime = Time.time;
 		while ((Time.time - startTime) < Duration)
 		{
-			transform.position = Vector3.Lerp(_start, _end, (Time.time - startTime) / Duration);
+			transform.position = Vector3.Lerp(start, end, (Time.time - startTime) / Duration);
 			yield return null;
 		}
-		transform.position = _end;
+		transform.position = end;
 	}
 
 }

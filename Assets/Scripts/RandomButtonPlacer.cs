@@ -1,7 +1,12 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering;
 using Random = UnityEngine.Random;
+
+[Serializable]
+public class PlacementEvent : UnityEvent<RaycastHit>
+{}
 
 public class RandomButtonPlacer : MonoBehaviour
 {
@@ -14,6 +19,9 @@ public class RandomButtonPlacer : MonoBehaviour
 	public float SinkFactor;
 	public float ScaleFactor;
 
+	[Header("Events")]
+	public PlacementEvent OnPlacement;
+	
 	private void Start()
 	{
 		RaycastHit hit;
@@ -30,5 +38,6 @@ public class RandomButtonPlacer : MonoBehaviour
 			2 - Mathf.Abs(hit.normal.y),
 			2 - Mathf.Abs(hit.normal.z)
 		);
+		OnPlacement.Invoke(hit);
 	}
 }

@@ -361,6 +361,9 @@ MonoBehaviour:
   - {fileID: 2068215636}
   SinkFactor: 0.8
   ScaleFactor: 1.5
+  OnPlacement:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &275871233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1165,9 @@ MonoBehaviour:
   - {fileID: 2068215636}
   SinkFactor: 0.8
   ScaleFactor: 1.5
+  OnPlacement:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1133385988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1839,9 @@ MonoBehaviour:
   - {fileID: 2068215636}
   SinkFactor: 0.8
   ScaleFactor: 1.5
+  OnPlacement:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1511912029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2349,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0c40a444a4a469945b841c9730731002, type: 2}
     - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
         type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
+        type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1136647690}
@@ -2372,6 +2386,31 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2068215639}
+    - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Slide
+      objectReference: {fileID: 0}
+    - target: {fileID: 406761795003803514, guid: 850a9f8563c316a4dab9b39ade62d697,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 406761795003803515, guid: 850a9f8563c316a4dab9b39ade62d697, type: 3}
@@ -2410,6 +2449,46 @@ MonoBehaviour:
   - {fileID: 1136647686}
   SinkFactor: 0.6
   ScaleFactor: 1.5
+  OnPlacement:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2068215638}
+        m_MethodName: HandlePlacement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2068215638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068215636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb63c4b783b2de549a12ea6ab23df1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2068215639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068215636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9edf8fe20e3bf4b9b4ba35e1a67ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: {x: 0, y: 0, z: 0}
+  Duration: 2
 --- !u!82 &406761796925051819
 AudioSource:
   m_ObjectHideFlags: 0
