@@ -19,6 +19,7 @@ public class PlayerLook : MonoBehaviour
 	private void OnEnable()
 	{
 		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
 		_activeCount++;
 	}
 
@@ -41,6 +42,7 @@ public class PlayerLook : MonoBehaviour
 		if (--_activeCount == 0)
 		{
 			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 		}
 	}
 }
