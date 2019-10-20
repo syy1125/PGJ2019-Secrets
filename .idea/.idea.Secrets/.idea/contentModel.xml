@@ -12,6 +12,7 @@
           <e p="ButtonControl.cs" t="Include" />
           <e p="ButtonSound.cs" t="Include" />
           <e p="Checkpoint.cs" t="Include" />
+          <e p="ClearSecret.cs" t="Include" />
           <e p="DynamicSlidingDirection.cs" t="Include" />
           <e p="ExitTrigger.cs" t="Include" />
           <e p="ExpectedPuzzleInput.cs" t="Include" />
@@ -30,6 +31,8 @@
           <e p="ResumeGame.cs" t="Include" />
           <e p="SaveData.cs" t="Include" />
           <e p="SceneTransition.cs" t="Include" />
+          <e p="SecretComment.cs" t="Include" />
+          <e p="SecretRoom.cs" t="Include" />
           <e p="SlidingDoor.cs" t="Include" />
         </e>
       </e>
