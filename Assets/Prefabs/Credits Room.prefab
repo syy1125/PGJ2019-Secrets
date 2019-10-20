@@ -224,8 +224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -500, y: -200}
+  m_AnchoredPosition: {x: 10, y: -5}
+  m_SizeDelta: {x: -360, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1498281220
 CanvasRenderer:
@@ -267,7 +267,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "<b>Team</b>\n\tHarry - Programmer\n\tJack - Programmer\n\tJay - Audio\n\tRyan
-    - Programmer\n\tYichong (Alan) - Programmer"
+    - Programmer\n\tYichong (Alan) - Played Around Designer"
 --- !u!1 &1612269992
 GameObject:
   m_ObjectHideFlags: 0
