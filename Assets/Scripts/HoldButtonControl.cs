@@ -26,17 +26,18 @@ public class HoldButtonControl : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Mouse0) && onTarget)
 		{
 			_clicking = true;
+			ProgressBar.gameObject.SetActive(true);
 		}
 
 		if (!Input.GetKey(KeyCode.Mouse0))
 		{
 			_clicking = false;
+			ProgressBar.gameObject.SetActive(false);
 			_progress = 0;
 		}
 
 		if (_clicking)
 		{
-			ProgressBar.gameObject.SetActive(false);
 			_progress += Time.deltaTime;
 			ProgressBar.fillAmount = Mathf.Clamp(_progress / MaxProgress, 0, 1);
 

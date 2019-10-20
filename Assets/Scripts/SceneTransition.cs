@@ -22,6 +22,11 @@ public class SceneTransition : MonoBehaviour
 		_image = GetComponent<Image>();
 	}
 
+	public void SetNextScene(string sceneName)
+	{
+		NextScene = sceneName;
+	}
+
 	public void Transition()
 	{
 		StartCoroutine(DoTransition());
